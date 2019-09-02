@@ -1,8 +1,8 @@
 import React from 'react';
+import Clock from './Clock';
 import FirstComponent from './FirstComponent';
 import SecondComponent from './SecondComponent';
 import CommentBox from '../nestedcomponents/CommentBox';
-
 
 
 class HelloWorld extends React.Component {
@@ -26,6 +26,7 @@ class HelloWorld extends React.Component {
                 <FirstComponent name={"Islam Mesha"} />
                 <SecondComponent />
                 <CommentBox />
+                <Clock />
             </div>
         )
     }
