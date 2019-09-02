@@ -1,4 +1,9 @@
 import React from 'react';
+import FirstComponent from './FirstComponent';
+import SecondComponent from './SecondComponent';
+import CommentBox from '../nestedcomponents/CommentBox';
+
+
 
 class HelloWorld extends React.Component {
     constructor(props) {
@@ -17,6 +22,10 @@ class HelloWorld extends React.Component {
         return (
             <div>
                 <div style={{ color: "red", }}> Hello {this.state.firstName} !</div >
+                <br></br>
+                <FirstComponent name={"Islam Mesha"} />
+                <SecondComponent />
+                <CommentBox />
             </div>
         )
     }
