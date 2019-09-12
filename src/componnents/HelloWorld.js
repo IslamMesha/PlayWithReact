@@ -5,7 +5,7 @@ import SecondComponent from './SecondComponent';
 import CommentBox from '../nestedcomponents/CommentBox';
 import Toggle from './Toggle';
 import Greeting from '../conditional_rendering/Greeting';
-
+import Calculator from "./temperature_calculator/Calculator";
 
 class HelloWorld extends React.Component {
     constructor(props) {
@@ -23,8 +23,8 @@ class HelloWorld extends React.Component {
     };
 
     handleChange = (e) => {
-        this.setState(state => ({
-            isLoggedIn: !state.isLoggedIn,
+        this.setState((prevstate, props) => ({
+            isLoggedIn: !prevstate.isLoggedIn,
         }));
     }
 
@@ -40,6 +40,7 @@ class HelloWorld extends React.Component {
                 <Clock />
                 <Toggle />
                 <Greeting isLoggedIn={this.state.isLoggedIn} />
+                <Calculator />
             </div>
         )
     }
